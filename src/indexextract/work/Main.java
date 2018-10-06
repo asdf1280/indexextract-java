@@ -1,4 +1,4 @@
-package kr.userapps.indexextract.work;
+package indexextract.work;
 
 import java.awt.Desktop;
 import java.io.File;
@@ -25,8 +25,8 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import kr.userapps.indexextract.objects.AssetObject;
-import kr.userapps.indexextract.objects.Version;
+import indexextract.objects.AssetObject;
+import indexextract.objects.Version;
 
 /**
  * Minecraft version manifest:

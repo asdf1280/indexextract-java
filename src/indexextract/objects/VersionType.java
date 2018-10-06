@@ -1,4 +1,4 @@
-package kr.userapps.indexextract.objects;
+package indexextract.objects;
 
 public enum VersionType {
 	release, snapshot, old_beta, old_alpha;

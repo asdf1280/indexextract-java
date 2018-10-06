@@ -1,4 +1,4 @@
-package kr.userapps.indexextract.work;
+package indexextract.work;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

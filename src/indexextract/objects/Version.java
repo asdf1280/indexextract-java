@@ -1,4 +1,4 @@
-package kr.userapps.indexextract.objects;
+package indexextract.objects;
 
 import com.google.gson.annotations.SerializedName;
 
