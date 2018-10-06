@@ -1,35 +1,23 @@
-# Minecraft Index Extractor - VB.NET Version
-(Working on .NET Framework 4.7.1+)
+# Minecraft Index Extractor - Java Version
+(Working on Java Runtime Environment 1.8.0)
 
 This is an beautiful working Minecraft index extract program.
 
 If you are using this program, you can easily extract the Minecraft index.
-The index is **usually** stored in an `.minecraft/assets/indexes`. This time, it only work in this directory. Please fork my project and improve it!
+Index file and resources are downloaded from Mojang server. (VB version copies from local resource folder)
 
 You can easily extract the index would use this program.
 ## How to use this software
 
-> Open the program
+> Will be added
 
-> Click <kbd>browse</kbd> button
-
-> Select version from list or browse file.
-
-> Click <kbd>confirm</kbd>
-
-> Click <kbd>start</kbd>
-
-> When it finish. click <kbd>browse</kbd>.
-
-Good job. You're done.
-
-[**Download it NOW!**](https://github.com/dhkim0800/indexextract/releases/download/18.06e0/indexextract.exe)
+**Download it NOW!** (Will be added)
 
 ## Known issues
 
-You have to install Minecraft, or you will meet **unhandled exceptions!**
+No GUI.
 
-Issue 2. In fact, Java is much faster in json processing with Gson. (I couldn't find JSON api. If you find it, Please contact to bycommandntwk@gmail.com, dhkim0800@naver.com, or Issues page in this project(recommended). AND I DON'T KNOW ASYNC PROGRAMMING WITH VB WELL AND I CANNOT CHANGE CODE WITH JSON API.
+Working fine.
 
 ## Get index from server
 
