@@ -15,6 +15,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
+import java.util.logging.Logger;
 
 import org.apache.commons.io.FileUtils;
 
@@ -37,9 +38,11 @@ import indexextract.objects.Version;
  *
  */
 public class Main {
+	public static Logger lg = Logger.getLogger("indexextract");
 	public static void main(String[] args) throws Exception {
-		System.out.println("[Info] Initializing Indexextract-Java -----");
-		System.out.println("[Info] An optimized Minecraft resource downloader");
+		lg.info("Initializing Indexextract-Java");
+		lg.info("An optimized Minecraft resource downloader");
+		lg.info("Initializing...");
 		new Main();
 	}
 
@@ -54,18 +57,9 @@ public class Main {
 		clearConsole();
 		Gson g = new GsonBuilder().setPrettyPrinting().create();
 		Scanner f = new Scanner(System.in);
-		System.out.println("[Info] Downloading versions...");
+		lg.info("Connecting...");
+		lg.info("Downloading version_manifest...");
 		JsonElement je = Downloader.downloadJson("https://launchermeta.mojang.com/mc/game/version_manifest.json");
-		System.out.println("[Info] Downloaded versions. Displaying available versions:");
-		System.out.println("----- Select version by input ----------------------------");
-		// System.out.println(g.toJson(je.getAsJsonObject().get("versions")));
-		// @SuppressWarnings("unchecked")
-		// ArrayList<Version> vss = g.fromJson(, ArrayList.class);
-		// Iterator<Version> vsi = vss.iterator();
-		// while(vsi.hasNext()) {
-		// Version str = vsi.next();
-		// System.out.println(str.id);
-		// }
 		clearConsole();
 		int rt = 0;
 		int drt = 0;
@@ -105,22 +99,22 @@ public class Main {
 		String ver = f.next();
 		f.nextLine();
 		if (!ids.containsKey(ver)) {
-			System.out.println("Version not found. Exiting program.");
+			System.out.println("Version not found. Closing program.");
 			System.exit(0);
 		}
 
 		Version slt = ids.get(ver);
-		System.out.println("[Info] Version found. Downloading json informations.");
-		System.out.println("[Info] Download URL: " + slt.url);
+		lg.info("Version found. Downloading json informations.");
+		lg.info("Download from: " + slt.url);
 		JsonElement vln = Downloader.downloadJson(slt.url);
-		System.out.println("[Info] Extracting fields");
+		lg.info("Extracting fields");
 		String idxurl = vln.getAsJsonObject().get("assetIndex").getAsJsonObject().get("url").getAsString();
-		System.out.println("[Info] Indexes file URL: " + idxurl);
+		lg.info("Indexes file URL: " + idxurl);
 		JsonElement idx = Downloader.downloadJson(idxurl);
 		System.out.println(g.toJson(idx));
 		JsonObject objs = idx.getAsJsonObject().get("objects").getAsJsonObject();
 		Iterator<String> sts = objs.keySet().iterator();
-		System.out.println("[Info] Generating dirs");
+		lg.info("Generating dirs");
 		while (sts.hasNext()) {
 			String st = sts.next();
 			File fi = new File("./indexextract/" + ver + "/" + st);
@@ -133,16 +127,12 @@ public class Main {
 			while (sts2.hasNext()) {
 				if (trds > mx) {
 					lst = trds;
-					while (trds > 0) {
+					while (trds > 4) {
 						if (lst != trds) {
-							System.out.println();
-							System.out.print("Waiting " + trds + " become 0");
 							lst = trds;
-						} else {
-							System.out.print(".");
 						}
 						try {
-							Thread.sleep(50);
+							Thread.sleep(20);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -159,7 +149,7 @@ public class Main {
 						String st = sts2.next();
 						AssetObject ao = g.fromJson(objs.get(st), AssetObject.class);
 
-						System.out.println("[Info] Downloading " + st + ", " + rm-- + " left.");
+						lg.info("Downloading " + st + ", " + rm-- + " left.");
 						String u = "https://resources.download.minecraft.net/" + ao.hash.substring(0, 2) + "/"
 								+ ao.hash;
 						File fi = new File("./indexextract/" + ver + "/" + st);
@@ -178,10 +168,9 @@ public class Main {
 		}
 
 		while (trds != 0) {
-			Thread.sleep(100);
+			Thread.sleep(10);
 		}
 
-		System.out.println("Task finished.");
 		while (true) {
 			System.out.println("----- What to do? ----------------------------------------");
 			System.out.println("0: Exit");
