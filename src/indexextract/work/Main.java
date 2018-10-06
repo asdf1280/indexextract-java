@@ -38,12 +38,12 @@ import indexextract.objects.Version;
  */
 public class Main {
 	public static void main(String[] args) throws Exception {
-		System.out.println("[Info] Initializing IndexExtract-JVM -----");
-		System.out.println("[Info] An optimized Minecraft resource extractor");
+		System.out.println("[Info] Initializing Indexextract-Java -----");
+		System.out.println("[Info] An optimized Minecraft resource downloader");
 		new Main();
 	}
 
-	public static final String credit = "IndexExtract™ ©2018 User. All rights reserved. Uses Java Runtime Enviornment 10® ©2018 Oracle.\n"
+	public static final String credit = "Indexextract ©2018 User(dhkim0800). All rights reserved. Uses Java Runtime Enviornment 1.8® ©2014 Oracle.\n"
 			+ "All rights reserved. Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.\n"
 			+ "Powered by Gson ©2008 Google Inc. Licensed under the Apache License, Version 2.0. You may obtain a copy of the License at \'http://www.apache.org/licenses/LICENSE-2.0\'.\n"
 			+ "Powered by Apache Commons-text ©2014-2018 The Apache Software Foundation. All Rights Reserved.\n"
@@ -69,8 +69,9 @@ public class Main {
 		clearConsole();
 		int rt = 0;
 		int drt = 0;
-		System.out.println("IndexExtract license: ");
+		System.out.println("=======================Credits=========================");
 		System.out.println(credit);
+		System.out.println("=======================================================");
 		System.out.println("----- What to do? -------------------------------------");
 		System.out.println("0: Download indexes");
 		System.out.println("1: Extract indexes from local file");
