@@ -127,7 +127,7 @@ public class Main {
 			while (sts2.hasNext()) {
 				if (trds > mx) {
 					lst = trds;
-					while (trds > 4) {
+					while (trds > 12) {
 						if (lst != trds) {
 							lst = trds;
 						}
