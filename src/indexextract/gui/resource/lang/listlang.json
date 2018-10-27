@@ -1,0 +1,14 @@
+{
+	"languages": [
+		"en_us.json",
+		"ko_kr.json"
+	],
+	"langfonts": {
+		"ko_kr": "NanumGothic.ttf",
+		"en_us": "NotoSans-Medium.ttf"
+	},
+	"keys": [
+		"RSRC_INIT",
+		"WELCOME"
+	]
+}
