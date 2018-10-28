@@ -3,6 +3,8 @@ package indexextract.gui;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.Locale;
 
 import javax.swing.JFrame;
@@ -30,8 +32,6 @@ public class MainGui {
 	public MainGui() {
 		JFrame frm = new JFrame("Indexextract Java");
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frm.setSize(500, 300);
-		frm.setPreferredSize(frm.getSize());
 		preferredSize = frm.getSize();
 		frm.addComponentListener(new UnresizableCenterComponentListener(frm));
 		frm.setVisible(true);
@@ -40,9 +40,19 @@ public class MainGui {
 		basePanel.setBackground(Color.black);
 		basePanel.setFont(guifont);
 		frm.setContentPane(basePanel);
-
+		
+		frm.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				// TODO Auto-generated method stub
+				basePanel.loadImage();
+			}
+		});
 		frm.validate();
+		frm.pack();		
+		frm.setPreferredSize(frm.getSize());
 		basePanel.loadImage();
+		basePanel.initComponent();
 	}
 	
 	public static final Gson gi;
