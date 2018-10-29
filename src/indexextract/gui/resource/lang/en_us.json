@@ -4,6 +4,6 @@
 	"MAINMENU_INDEX_EXTRACTOR": "Resource extractor",
 	"MAINMENU_INDEX_DOWNLOADER": "Resource downloader",
 	"MAINMENU_EXIT": "Exit",
-	"DIALOG_WIP_TITLE": "Information",
+	"DIALOG_WIP_TITLE": "Indexextract",
 	"DIALOG_WIP_MESSAGE": "Work in progress."
 }

@@ -4,6 +4,6 @@
 	"MAINMENU_INDEX_EXTRACTOR": "리소스 추출",
 	"MAINMENU_INDEX_DOWNLOADER": "리소스 다운로드",
 	"MAINMENU_EXIT": "종료",
-	"DIALOG_WIP_TITLE": "안내",
+	"DIALOG_WIP_TITLE": "Indexextract",
 	"DIALOG_WIP_MESSAGE": "해당 기능은 개발 중입니다."
 }

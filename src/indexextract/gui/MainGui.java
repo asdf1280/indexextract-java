@@ -8,6 +8,7 @@ import java.awt.event.MouseEvent;
 import java.util.Locale;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 import org.apache.commons.io.IOUtils;
@@ -27,6 +28,7 @@ import joptsimple.OptionSpec;
 
 public class MainGui {
 	public static Font guifont = null;
+	public static Font osfont = null;
 	public static Dimension preferredSize = null;
 
 	public MainGui() {
@@ -38,7 +40,7 @@ public class MainGui {
 
 		BasePanel basePanel = new BasePanel();
 		basePanel.setBackground(Color.black);
-		basePanel.setFont(guifont);
+		basePanel.setFont(osfont);
 		frm.setContentPane(basePanel);
 		
 		frm.addMouseListener(new MouseAdapter() {
@@ -73,10 +75,15 @@ public class MainGui {
 		OptionSpec<String> localeOptionSpec = op.accepts("locale").withOptionalArg();
 		OptionSet os = op.parse(args);
 		try {
-			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+			String cln = UIManager.getSystemLookAndFeelClassName();
+			//cln = "com.sun.java.swing.plaf.motif.MotifLookAndFeel";
+			System.out.println(cln);
+			UIManager.setLookAndFeel(cln);
 		} catch (Exception e) {
+			e.printStackTrace();
 			System.out.println("Error: An error occured while changing look and feel");
 		}
+		osfont = new JOptionPane().getFont();
 		{ //Load language
 			String forceLang = os.valueOf(localeOptionSpec);
 			String lfn = "en_us";
