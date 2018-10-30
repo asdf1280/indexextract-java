@@ -1,0 +1,22 @@
+{
+	"MAINMENU_RESOURCE_INIT": "リソースをロードしています。",
+	"MAINMENU_TITLE": "Indexextract",
+	"MAINMENU_INDEX_EXTRACTOR": "リソース抽出する",
+	"MAINMENU_INDEX_DOWNLOADER": "リソースのダウンロード",
+	"MAINMENU_EXIT": "終了",
+	"DIALOG_COMMON_TITLE": "Indexextract",
+	"DIALOG_WIP_MESSAGE": "その機能は、開発中です。",
+	"DIALOG_FONT_MESSAGE": "この言語のフォントをロードするには数秒の時間が必要です。不便でもご了承お願いいたします。",
+	"COMMON_BUTTON_BACK": "戻る",
+	"EXTRACTPANEL_LABEL_TITLE": "リソース抽出",
+	"DOWNLOADPANEL_LABEL_TITLE": "ダウンローダ",
+	"DOWNLOADPANEL_LABEL_SELECTVERSION": "バージョンを選択：",
+	"DOWNLOADPANEL_RADIOBUTTON_RELEASE": "リリース",
+	"DOWNLOADPANEL_RADIOBUTTON_SNAPSHOT": "スナップショット",
+	"DOWNLOADPANEL_RADIOBUTTON_OLDBETA": "古いベータ版",
+	"DOWNLOADPANEL_RADIOBUTTON_OLDALPHA": "古いアルファ",
+	"DOWNLOADPANEL_COMBOBOX_LOADING": "読み込み中。 。 。 お待ちください。",
+	"DOWNLOADPANEL_ERROR_JSON": "JSONファイルを読み込めません。 （コード：000）",
+	"DOWNLOADPANEL_ERROR_DIALOG": "インデックスの読み込み中にエラーが発生しました：\n {0}：{1}",
+	"DOWNLOADPANEL_ERROR_DIALOG_TITLE": "エラー：Indexextract"
+}

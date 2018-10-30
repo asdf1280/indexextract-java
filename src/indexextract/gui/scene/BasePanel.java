@@ -12,7 +12,7 @@ import java.awt.image.BufferedImage;
 
 import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
-import javax.swing.JOptionPane;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import indexextract.gui.GuiUtils;
@@ -23,12 +23,14 @@ import indexextract.gui.component.RoundButton;
 public class BasePanel extends JPanel {
 	private static final long serialVersionUID = 1L;
 	private BufferedImage back = null;
-
-	public BasePanel() {
+	private JFrame frame = null;
+	
+	public BasePanel(JFrame frm) {
 		setPreferredSize(new Dimension(500, 270));
 		setOpaque(true);
 		setLayout(null);
 		_waitPaintImage();
+		frame = frm;
 	}
 	
 	public RoundButton extract_button = null;
@@ -48,7 +50,12 @@ public class BasePanel extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(BasePanel.this, LangSaver.DIALOG_WIP_MESSAGE, LangSaver.DIALOG_WIP_TITLE, JOptionPane.CANCEL_OPTION);
+				ExtractPanel exp = new ExtractPanel(frame);
+				frame.setContentPane(exp);
+				frame.validate();
+				frame.pack();
+				frame.setPreferredSize(frame.getSize());
+				exp.initComponent();
 			}
 		});
 		add(extract_button);
@@ -64,7 +71,12 @@ public class BasePanel extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(BasePanel.this, LangSaver.DIALOG_WIP_MESSAGE, LangSaver.DIALOG_WIP_TITLE, JOptionPane.CANCEL_OPTION);
+				DownloadPanel dnp = new DownloadPanel(frame);
+				frame.setContentPane(dnp);
+				frame.validate();
+				frame.pack();
+				frame.setPreferredSize(frame.getSize());
+				dnp.initComponent();
 			}
 		});
 		add(download_button);

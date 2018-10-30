@@ -1,11 +1,15 @@
 {
 	"languages": [
 		"en_us.json",
-		"ko_kr.json"
+		"ko_kr.json",
+		"zh_cn.json",
+		"ja_jp.json"
 	],
 	"langfonts": {
 		"ko_kr": "SeoulNamsanM.ttf",
-		"en_us": "NotoSans-Medium.ttf"
+		"en_us": "NotoSans-Medium.ttf",
+		"zh_cn": "NotoSansCJKsc-Black.otf",
+		"ja_jp": "NotoSansCJKsc-Black.otf"
 	},
 	"keys": [
 		"MAINMENU_RESOURCE_INIT",
@@ -13,7 +17,20 @@
 		"MAINMENU_INDEX_EXTRACTOR",
 		"MAINMENU_INDEX_DOWNLOADER",
 		"MAINMENU_EXIT",
-		"DIALOG_WIP_TITLE",
-		"DIALOG_WIP_MESSAGE"
+		"DIALOG_COMMON_TITLE",
+		"DIALOG_WIP_MESSAGE",
+		"DIALOG_FONT_MESSAGE",
+		"COMMON_BUTTON_BACK",
+		"EXTRACTPANEL_LABEL_TITLE",
+		"DOWNLOADPANEL_LABEL_TITLE",
+		"DOWNLOADPANEL_LABEL_SELECTVERSION",
+		"DOWNLOADPANEL_RADIOBUTTON_RELEASE",
+		"DOWNLOADPANEL_RADIOBUTTON_SNAPSHOT",
+		"DOWNLOADPANEL_RADIOBUTTON_OLDBETA",
+		"DOWNLOADPANEL_RADIOBUTTON_OLDALPHA",
+		"DOWNLOADPANEL_COMBOBOX_LOADING",
+		"DOWNLOADPANEL_ERROR_JSON",
+		"DOWNLOADPANEL_ERROR_DIALOG",
+		"DOWNLOADPANEL_ERROR_DIALOG_TITLE"
 	]
 }

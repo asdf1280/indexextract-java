@@ -4,6 +4,19 @@
 	"MAINMENU_INDEX_EXTRACTOR": "Resource extractor",
 	"MAINMENU_INDEX_DOWNLOADER": "Resource downloader",
 	"MAINMENU_EXIT": "Exit",
-	"DIALOG_WIP_TITLE": "Indexextract",
-	"DIALOG_WIP_MESSAGE": "Work in progress."
+	"DIALOG_COMMON_TITLE": "Indexextract",
+	"DIALOG_WIP_MESSAGE": "Work in progress.",
+	"SPECIALLANG_TAKELONGRENDER": "It takes a few seconds to load the fonts for this language. Sorry for the inconvenience.",
+	"COMMON_BUTTON_BACK": "Quit",
+	"EXTRACTPANEL_LABEL_TITLE": "Extractor",
+	"DOWNLOADPANEL_LABEL_TITLE": "Downloader",
+	"DOWNLOADPANEL_LABEL_SELECTVERSION": "Select version: ",
+	"DOWNLOADPANEL_RADIOBUTTON_RELEASE": "Release",
+	"DOWNLOADPANEL_RADIOBUTTON_SNAPSHOT": "Snapshot",
+	"DOWNLOADPANEL_RADIOBUTTON_OLDBETA": "Old beta",
+	"DOWNLOADPANEL_RADIOBUTTON_OLDALPHA": "Old alpha",
+	"DOWNLOADPANEL_COMBOBOX_LOADING": "Loading... Please wait.",
+	"DOWNLOADPANEL_ERROR_JSON": "Cannot load JSON file. (Code 000)",
+	"DOWNLOADPANEL_ERROR_DIALOG": "An error occured while loading indexes: \n{0}: {1}",
+	"DOWNLOADPANEL_ERROR_DIALOG_TITLE": "Error: Indexextract"
 }
