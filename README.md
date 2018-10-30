@@ -13,11 +13,20 @@ You can easily extract the index would use this program.
 
 **Download it NOW!** (Will be added)
 
+## Information
+GUI is currently developing.
+
+Support languages
+ * English
+ * Korean
+ * Chinese
+ * Japanese
+
 ## Known issues
 
-No GUI.
+GUI is WIP.
 
-Working fine.
+Console works fine.
 
 ## Get index from server
 
