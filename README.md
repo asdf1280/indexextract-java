@@ -16,11 +16,15 @@ You can easily extract the index would use this program.
 ## Information
 GUI is currently developing.
 
+GUI Main class: indexextract.gui.MainGui.class
+
+Console Main class: indexextract.work.main.class
+
 Support languages
- * English
- * Korean
- * Chinese
- * Japanese
+ * English (Person translation + Google translator(10%))
+ * Korean (Official translation)
+ * Chinese (Google translator)
+ * Japanese (Google translator)
 
 ## Known issues
 
