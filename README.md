@@ -1,3 +1,10 @@
+# WARNING: Archived Project
+> This project is no longer maintained and has been archived. I have now decided to develop a new indexectract program based on C# WPF. indexxtract-java is no longer developed because of Java's speed problems, functional limitations, and the fact that Java is trash.
+> 
+> For now, you can use the [indexextract-dotnet](https://github.com/dhkim0800/indexextract-dotnet) version. This version will also be archived once the WPF version is developed, but it is still being maintained and works perfectly.
+>
+> Thank you for paying attention to indexextract-java if you did so. And I wish we meet with the all new indexextract-wpf version. Bye Java!
+
 # Minecraft Index Extractor - Java Version
 (Working on Java Runtime Environment 1.8.0)
 
